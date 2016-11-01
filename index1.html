@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="my.css">
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="my.js"></script>
+    <!-- 新浪微博api接口调用的js文件 -->
+    <!-- <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script> -->
+    <!-- 新浪微博api接口调用的js文件 -->
+    <title>团800</title>
+</head>
+
+<body>
+    <!-- 顶部收藏区域 -->
+    <div id="top_bg">
+        <div id="top_box">
+            <p id="wenzi">把团800放入收藏夹，畅览万千团购！</p>
+            <span id="wenzi_btn">放入收藏夹</span>
+            <a href="" id="top_a">不再提醒</a>
+            <span id="close">关闭</span>
+        </div>
+    </div>
+    <!-- logo+搜索框等区域 -->
+    <div id="logo_search_box">
+        <!-- 顶部左侧菜单 -->
+        <ul class="top_menu" id="top_left_menu">
+            <li><a href="">免费注册</a></li>
+            <li><a href="">登录</a></li>
+            <li>
+                <a href="" class="has_hide " id="u_center">个人中心</a>
+                <div class="hide_box" id="ucenter_hide">
+                    <ul>
+                        <li><a href="">我的团购</a></li>
+                        <li><a href="">站内信</a></li>
+                        <li><a href="">基本资料</a></li>
+                        <li><a href="">我的积分</a></li>
+                        <li><a href="">800小秘书</a></li>
+                        <li><a href="">我的邀请</a></li>
+                        <li><a href="">个性订阅</a></li>
+                        <li><a href="">我的帖子</a></li>
+                        <li><a href="" class="red">手机代购订单</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li style="background:none;">
+                <a href="" class="has_hide" id="history">游览历史</a>
+                <div class="hide_box">
+                    <p>没有任何浏览记录</p>
+                </div>
+            </li>
+        </ul>
+        <!-- 顶部左侧菜单	 -->
+        <!-- <ul class="top_menu" id="top_right_menu">
+						<li><a href="">手机版</a></li>
+						<li><a href="">使用指南</a></li>
+						<li><a href="">加入收藏</a></li>
+						<li><a href="">关注团800</a></li>
+					</ul> -->
+        <!-- logo -->
+        <img src="images/logo.png" id="logo" />
+        <!-- logo -->
+        <!-- 城市名称区域 -->
+        <div id="city_box">
+            <span id='city_name'>呼和浩特</span>
+            <span id="city_right"></span>
+        </div>
+        <!-- 搜索区域 -->
+        <form action="" id="search_box">
+            <input type="text" id='search_con' value="滑雪" />
+            <input type="button" id="btn" />
+        </form>
+        <!-- 热门标签区域 -->
+        <div id="hot_tags">
+            <a href="">火锅</a>
+            <a href="">雪地靴</a>
+            <a href="">蛋糕甜点</a>
+            <a href="" class="red">温泉</a>
+            <a href="">围巾</a>
+            <a href="">客户端下载</a>
+            <a href="" class="red">新年换新貌</a>
+        </div>
+    </div>
+    <!-- logo+搜索框等区域结束 -->
+    <!-- 导航条 -->
+    <div id="menu_box">
+        <ul id="menu">
+            <li class="three first"><a href="" class="no_underline">团购首页</a></li>
+            <li class="three"><a href="" class="no_underline">团购导航</a></li>
+            <li class="three"><a href="" class="no_underline">团购地图</a></li>
+            <li class="line_bg"><a href="" class="no_underline">团购论坛</a></li>
+            <li><a href="">美食</a></li>
+            <li><a href="">娱乐</a></li>
+            <li><a href="">生活</a></li>
+            <li class="line_bg"><a href="">网购</a></li>
+            <li><a href="">摄影</a></li>
+            <li><a href="">电影</a></li>
+            <li><a href="">旅游</a></li>
+            <li>
+                <a href="">专享团</a>
+                <img src="images/new_ico.gif" alt="" />
+                <div id="everyday">
+                    <a href="#">每日新鲜优惠包邮送到家！</a>
+                    <div id="cover"></div>
+                </div>
+            </li>
+            <li><a href="">资讯</a></li>
+            <li><a href="">团购排行榜</a></li>
+        </ul>
+    </div>
+    <!-- 导航条 -->
+    <!-- 主体区域 -->
+    <div id="main">
+        <!-- 菜单，轮播区域 -->
+        <div id="left_menu_flash">
+            <!-- 左侧菜单 -->
+            <div id="left_menu">
+                <ul id='left_ul'>
+                    <li>
+                        <a href="" class="first_a">美食</a>
+                        <a href="" class="red">羊蝎子</a>
+                        <a href="">自助</a>
+                        <a href="">汉拿山</a>
+                    </li>
+                    <li>
+                        <a href="" class="first_a">娱乐</a>
+                        <a href="">KTV</a>
+                        <a href="">电影票</a>
+                        <a href="" class="red">温泉</a>
+                    </li>
+                    <li>
+                        <a href="" class="first_a">生活</a>
+                        <a href="">摄影写真</a>
+                        <a href="">美发</a>
+                        <a href="">美甲</a>
+                    </li>
+                    <li>
+                        <a href="" class="first_a">旅游</a>
+                        <a href="">三亚</a>
+                        <a href="">泰国游</a>
+                        <a href="">酒店</a>
+                    </li>
+                    <li>
+                        <a href="" class="first_a">网购</a>
+                        <a href="" class="red">专享团</a>
+                        <a href="">化妆品</a>
+                        <a href="" class="red">9.9包邮</a>
+                    </li>
+                    <li style="margin-top:1px;">
+                        <span>商圈</span>
+                        <a href="">朝阳区</a>
+                        <a href="">海淀区</a>
+                        <a href="">丰台区</a>
+                    </li>
+                </ul>
+                <div class="hide_box">
+                    <ul class="ul_l">
+                        <li>
+                            <p class="l_title"><a href="">自助</a><span>(696)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="">金钱豹</a></li>
+                                <li><a href="">铁板烧</a></li>
+                                <li><a href="">自助烤肉</a></li>
+                                <li><a href="">自助火锅</a></li>
+                                <li><a href="">海鲜自助</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">火锅烧烤</a><span>(3296)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="">东来顺</a></li>
+                                <li><a href="">烤羊腿</a></li>
+                                <li><a href="">烤鱼</a></li>
+                                <li><a href="">豆捞</a></li>
+                                <li><a href="">麻辣香锅</a></li>
+                                <li><a href="">羊蝎子</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">蛋糕甜品</a><span>(696)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="">好利来</a></li>
+                                <li><a href="">蛋糕</a></li>
+                                <li><a href="">甜品</a></li>
+                                <li><a href="">蛋挞</a></li>
+                                <li><a href="">味多美</a></li>
+                                <li><a href="">泡芙</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">地方菜系</a><span>(696)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="">湘菜</a></li>
+                                <li><a href="">粤菜</a></li>
+                                <li><a href="">烤鸭</a></li>
+                                <li><a href="">酸汤鱼</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">日韩料理</a><span>(696)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="">石锅拌饭</a></li>
+                                <li><a href="">汉釜宫</a></li>
+                                <li><a href="">全金城</a></li>
+                                <li><a href="">生鱼片</a></li>
+                                <li><a href="">寿司</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="div_r">
+                        <p class="title">明星商家</p>
+                        <ul class="shop_list">
+                            <li><a href="">金汉斯(西直门店)</a></li>
+                            <li><a href="">俏江南(国贸中心店)</a></li>
+                            <li><a href="">汉丽轩烤肉(牡丹园店)</a></li>
+                            <li><a href="">俏江南（恒基中心店）</a></li>
+                            <li><a href="">富丽客巴西烤肉(百朗园</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 第2个隐藏hide_box -->
+                <div class="hide_box">
+                    <ul class="ul_l">
+                        <li>
+                            <p class="l_title"><a href="">电影票</a><span>(696)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="">3D</a></li>
+                                <li><a href="">通兑票</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">KTV</a><span>(3296)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="">KTV</a></li>
+                                <li><a href="">酒吧</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">养生按摩</a><span>(696)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="">华夏良子</a></li>
+                                <li><a href="">刮痧</a></li>
+                                <li><a href="">按摩</a></li>
+                                <li><a href="">拔罐</a></li>
+                                <li><a href="">SPA</a></li>
+                                <li><a href="">足疗</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">温泉</a><span>(696)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="">九华山庄</a></li>
+                                <li><a href="">洗浴</a></li>
+                                <li><a href="">温泉</a></li>
+                                <li><a href="">度假村</a></li>
+                                <li><a href="">桑拿</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">运动健身</a><span>(696)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="">肚皮舞</a></li>
+                                <li><a href="">瑜伽</a></li>
+                                <li><a href="">动感单车</a></li>
+                                <li><a href="">钢管舞</a></li>
+                                <li><a href="">有氧运动</a></li>
+                                <li><a href="">游泳</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">游乐游艺</a><span>(776)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">水立方</a></li>
+                                <li><a href="#">水魔方</a></li>
+                                <li><a href="#">公园游</a></li>
+                                <li><a href="#">真人CS</a></li>
+                                <li><a href="#">游戏币</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">赛事演出</a><span>(235)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">舞台剧</a></li>
+                                <li><a href="#">音乐会</a></li>
+                                <li><a href="#">相声</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">其他娱乐</a><span>(165)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">陶艺</a></li>
+                                <li><a href="#">DIY</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="div_r">
+                        <p class="title">明星商家</p>
+                        <ul class="shop_list">
+                            <li><a href="">耀莱成龙国际影院</a></li>
+                            <li><a href="">紫光影城</a></li>
+                            <li><a href="">博纳国际影城(方庄店)</a></li>
+                            <li><a href="">星美国际影城（世界城</a></li>
+                            <li><a href="">同一首歌KTV(西直门</a></li>
+                        </ul>
+                        <p class="title">活动推荐</p>
+                        <img src="images/ycAD.jpg" alt="" />
+                        <a href="" class="ad_word">看演出，找团购！</a>
+                    </div>
+                </div>
+                <!-- 第3个隐藏hide_box -->
+                <div class="hide_box">
+                    <ul class="ul_l">
+                        <li>
+                            <p class="l_title"><a href="">摄影写真</a><span>(3938)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#" class="red">儿童摄影</a></li>
+                                <li><a href="#">古装</a></li>
+                                <li><a href="#">全家福</a></li>
+                                <li><a href="#" class="red">婚纱照</a></li>
+                                <li><a href="#">礼服</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">美容整形</a><span>(2787)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">审美</a></li>
+                                <li><a href="#">木子造型</a></li>
+                                <li><a href="#">克丽缇娜</a></li>
+                                <li><a href="#">丰胸</a></li>
+                                <li><a href="#">减肥</a></li>
+                                <li><a href="#">美容</a></li>
+                                <li><a href="#">脱毛</a></li>
+                                <li><a href="#" class="red">美发</a></li>
+                                <li><a href="#">美甲</a></li>
+                                <li><a href="#">洗剪吹</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">健康护理</a><span>(1150)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">口腔护理</a></li>
+                                <li><a href="#">体检</a></li>
+                                <li><a href="#">洗牙</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">车房</a><span>(376)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">打蜡</a></li>
+                                <li><a href="#">车美容</a></li>
+                                <li><a href="#">洗车</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">教育培训</a><span>(438)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">舞蹈</a></li>
+                                <li><a href="#">美术</a></li>
+                                <li><a href="#">钢琴</a></li>
+                                <li><a href="#">英语</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">报刊杂志</a><span>(18)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">杂志</a></li>
+                                <li><a href="#">期刊</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">其他生活</a><span>(652)</span></p>
+                        </li>
+                    </ul>
+                    <div class="div_r">
+                        <p class="title">明星商家</p>
+                        <ul class="shop_list">
+                            <li><a href="">八月恋影摄影</a></li>
+                            <li><a href="">爱康国宾体检中心(宣武)</a></li>
+                            <li><a href="">慈铭健康体检(潘家园</a></li>
+                            <li><a href="">安永 美来天行健</a></li>
+                            <li><a href="">北京绿色千影(阜成门</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--第4个隐藏hide_box-->
+                <div class="hide_box">
+                    <ul class="ul_l">
+                        <li>
+                            <p class="l_title"><a href="">酒店</a><span>(4847)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">钟点房</a></li>
+                                <li><a href="#">会员卡</a></li>
+                                <li><a href="#">商务酒店</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">旅游</a><span>(760)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">一日游</a></li>
+                                <li><a href="#">机票</a></li>
+                                <li><a href="#">二日游</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="div_r">
+                        <p class="title">明星商家</p>
+                        <ul class="shop_list">
+                            <li><a href="">北京国际鲜花港</a></li>
+                            <li><a href="">飘HOME连锁酒店</a></li>
+                            <li><a href="">速8酒店（北京南站）</a></li>
+                            <li><a href="">速8酒店（右安门店）</a></li>
+                            <li><a href="">南苑e家商务旅馆(王</a></li>
+                        </ul>
+                        <p class="title">娱乐推荐</p>
+                        <img src="images/lyAD1.jpg" alt="" />
+                        <a href="" class="ad_word">温泉滑雪，采摘休闲！</a>
+                    </div>
+                </div>
+                <!--第5个隐藏hide_box-->
+                <div class="hide_box">
+                    <ul class="ul_l">
+                        <li>
+                            <p class="l_title"><a href="">服装鞋袜</a><span>(696)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">保暖内衣</a></li>
+                                <li><a href="#">睡衣</a></li>
+                                <li><a href="#">帆布鞋</a></li>
+                                <li><a href="#">马丁靴</a></li>
+                                <li><a href="#">牛仔裤</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">化妆品</a><span>(3370)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#" class="red">面膜</a></li>
+                                <li><a href="#">BB霜</a></li>
+                                <li><a href="#">爽肤水</a></li>
+                                <li><a href="#">指甲油</a></li>
+                                <li><a href="#">防晒</a></li>
+                                <li><a href="#">乳液</a></li>
+                                <li><a href="#">护手霜</a></li>
+                                <li><a href="#">唇膏</a></li>
+                                <li><a href="#">香水</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">数码家电</a><span>(1399)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">手机</a></li>
+                                <li><a href="#">相机</a></li>
+                                <li><a href="#">手机壳</a></li>
+                                <li><a href="#">煮蛋器</a></li>
+                                <li><a href="#">u盘</a></li>
+                                <li><a href="#">耳机</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">家居用品</a><span>(3549)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">拖把</a></li>
+                                <li><a href="#">收纳盒</a></li>
+                                <li><a href="#">伞</a></li>
+                                <li><a href="#" class="red">保温杯</a></li>
+                                <li><a href="#">坐垫</a></li>
+                                <li><a href="#">护膝</a></li>
+                                <li><a href="#">四件套</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">配件饰品</a><span>(2284)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">钱包</a></li>
+                                <li><a href="#">手表</a></li>
+                                <li><a href="#" class="red">眼睛</a></li>
+                                <li><a href="#">戒指</a></li>
+                                <li><a href="#">手镯</a></li>
+                                <li><a href="#">项链</a></li>
+                                <li><a href="#" class="red">围巾</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">食品饮料</a><span>(4080)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">牛肉干</a></li>
+                                <li><a href="#" class="red">饼干</a></li>
+                                <li><a href="#">泡椒凤爪</a></li>
+                                <li><a href="#">柚子茶</a></li>
+                                <li><a href="#" class="red">咖啡</a></li>
+                                <li><a href="#">大闸蟹</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">孕婴儿童</a><span>(1120)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">奶粉</a></li>
+                                <li><a href="#">玩具</a></li>
+                                <li><a href="#">早教</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">文体户外</a><span>(479)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">羽毛球</a></li>
+                                <li><a href="#">跳舞毯</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="l_title"><a href="">其他网购</a><span>(96)</span></p>
+                            <ul class="r_ul">
+                                <li><a href="#">话费</a></li>
+                                <li><a href="#">花束</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--第6个隐藏hide_box-->
+                <div class="hide_box">
+                    <ul id="county_list">
+                        <li><a href="">朝阳区</a><span>(123)</span></li>
+                        <li><a href="">海淀区</a><span>(123)</span></li>
+                        <li><a href="">西城区</a><span>(123)</span></li>
+                        <li><a href="">丰台区</a><span>(123)</span></li>
+                        <li><a href="">东城区</a><span>(123)</span></li>
+                        <li><a href="">昌平区</a><span>(123)</span></li>
+                        <li><a href="">崇文区</a><span>(123)</span></li>
+                        <li><a href="">宣武区</a><span>(123)</span></li>
+                        <li><a href="">怀柔区</a><span>(123)</span></li>
+                        <li><a href="">石景山区</a><span>(123)</span></li>
+                        <li><a href="">房山区</a><span>(123)</span></li>
+                        <li><a href="">通州区</a><span>(123)</span></li>
+                        <li><a href="">顺义区</a><span>(123)</span></li>
+                        <li><a href="">大兴区</a><span>(123)</span></li>
+                        <li><a href="">延庆区</a><span>(123)</span></li>
+                        <li><a href="">近郊区</a><span>(123)</span></li>
+                        <li><a href="">密云区</a><span>(123)</span></li>
+                        <li><a href="">平谷区</a><span>(123)</span></li>
+                        <li><a href="">门头沟区</a><span>(123)</span></li>
+                    </ul>
+                    <div class="div_r">
+                        <p class="title">团购地图</p>
+                        <img src="images/new_map.png" alt="" />
+                        <a href="" class="map_a">地图模式查看团购更直观！</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 图片轮播区域 -->
+            <div id="flash_box">
+                <img src="images/flash/1.jpg" alt="" style="display:block;" />
+                <img src="images/flash/2.jpg" alt="" />
+                <img src="images/flash/3.jpg" alt="" />
+                <img src="images/flash/4.jpg" alt="" />
+                <img src="images/flash/5.jpg" alt="" />
+                <img src="images/flash/6.jpg" alt="" />
+                <img src="images/flash/7.jpg" alt="" />
+                <ul>
+                    <li style="margin-left:0;" class="hover">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                </ul>
+            </div>
+            <!-- 图片轮换板区域结束→ -->
+            <div id="vip_box">
+                <!-- ←vip特权区域 -->
+                <p class="title">
+                    <span>团800会员特权</span>
+                    <a href="">注册即享有！</a>
+                </p>
+                <ul>
+                    <li><a href="">积分兑换</a></li>
+                    <li class="two"><a href="">团购投诉</a></li>
+                    <li class="three"><a href="">个性订阅</a></li>
+                    <li class="four"><a href="">二手团购</a></li>
+                </ul>
+            </div>
+            <!-- vip特权区域 -->
+            <!-- 小图轮换区域 -->
+            <div id="litter_pic">
+                <div id="pic_box">
+                    <img src="images/lit_pic/1.jpg" alt="" />
+                    <img src="images/lit_pic/2.jpg" alt="" />
+                    <img src="images/lit_pic/3.jpg" alt="" />
+                    <img src="images/lit_pic/4.jpg" alt="" />
+                    <img src="images/lit_pic/5.jpg" alt="" />
+                </div>
+                <p>
+                    <a href="javascript:void(0)"></a>
+                    <a href="javascript:void(0)" class='two'></a>
+                </p>
+            </div>
+        </div>
+        <!-- 左侧导航菜单+图片轮换区域结束 -->
+        <!-- 团购网+商城名站区域 -->
+        <div id="tgw_box">
+            <p class='title'>团购网</p>
+            <p class="title shop_p">商城名站</p>
+            <ul id='tgw_ul'>
+                <li>
+                    <a href="">大众点评团</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">拉手网</a>
+                    <div class="hide_box" num='8'>
+                        <img src="images/tgw_hidebox_top.gif" alt="" />
+                        <div class="con">
+                            <p class='hyd'>活跃度
+                                <span class="gray_star">
+												<span class="orange_star"></span>
+                                </span>
+                            </p>
+                            <p class="today_total">今日北京共<span>2711</span>个团购</p>
+                            <div class="txz_box">
+                                <p class="txz">通行证合作站点</p>
+                                <p>从团800访问无需重复注册</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul id="shop_ul">
+                <li><a href="">上品折扣网</a></li>
+                <li><a href="">亚马逊</a></li>
+                <li><a href="">唯品会</a></li>
+                <li><a href="">俏物悄语</a></li>
+                <li><a href="">京东商城</a></li>
+                <li><a href="">No5化妆品</a></li>
+                <li><a href="">五百城电器网</a></li>
+                <li><a href="">乐蜂化妆品</a></li>
+                <li><a href="">天天网</a></li>
+                <li><a href="">国美库巴网</a></li>
+                <li><a href="">走秀网</a></li>
+            </ul>
+        </div>
+        <!-- 团购网+商城名站区域结束 -->
+        <!-- 第二个导航条 -->
+        <div id="menu2">
+            <ul id="ul_l">
+                <li><a href="" class="first">今日团购</a></li>
+                <li><a href="">今日发布</a></li>
+                <li>
+                    <a href="">周边定制</a>
+                    <img src="images/new_ico.png" alt="">
+                </li>
+                <li>
+                    <a href="">标签定制</a>
+                    <img src="images/new_ico.png" alt="">
+                </li>
+                <li><a href="">网站定制</a></li>
+            </ul>
+            <ul id="ul_r">
+                <li class="first">排序：</li>
+                <li><a href="" class="mo">默认</a></li>
+                <li><a href="" class="bg_ico">价格</a></li>
+                <li><a href="" class="bg_ico">折扣</a></li>
+                <li><a href="" class="bg_ico sam">销量</a></li>
+                <li><a href="" class="bg_ico">折扣</a></li>
+            </ul>
+        </div>
+        <!-- 左侧商品展示列 -->
+        <div id="l_list_box" class="l_list_box">
+            <!--美食天下区域-->
+            <!-- 标题区域 -->
+            <div id="title_box">
+                <h3 id="meishitianxia">美食天下</h3>
+                <ul>
+                    <li><a href="">自助</a></li>
+                    <li><a href="">火锅烧烤</a></li>
+                    <li><a href="">蛋糕甜品</a></li>
+                    <li><a href="">地方菜系</a></li>
+                    <li><a href="">日韩亚系</a></li>
+                    <li><a href="">西餐国际</a></li>
+                    <li><a href="">快餐休闲</a></li>
+                    <li><a href="">海鲜</a></li>
+                </ul>
+                <a href="" class="more">更多</a>
+            </div>
+            <!-- 商品区块展示 -->
+            <div class="shop_list ">
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/135453814122649400.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place '>西城区</span>
+                    <a href="" class="golook"></a>
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/131482_130002311150000000.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/172206_8894720.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/176769-1359188408566.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/8d8a20f9-0fb6-42a5-9507-8bf0d4f48cc8.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/477.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/13591039269810.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/c633c8a3-4761-4b04-961d-2f8b90f51f7a.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/bc87826a-f18c-4bf5-aafe-3237fa948aba.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/cdaf5423-f62c-4918-957c-4cfc373b6067.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/4f83471d-db2b-4e7d-9491-394b31063e26.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/477.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/cbde29df-ff1d-4b4b-a0c5-a15c7575ca7f.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/cd9a2b2a-bcb1-40b0-b2b9-df5843720dd6.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/34448585-4814-428e-85de-28f2e1175b80.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--查看更多区域-->
+            <div class="look_more">
+                <p>北京还有<span class="orange">7301</span>个<span class="font_big">美食天下</span>团购，<a href="" class="orange more_a">查看更多24个</a></p>
+            </div>
+            <!--娱乐休闲区域-->
+            <!-- 标题区域 -->
+            <div id="title_box">
+                <h3 id="shenghuofuwu">娱乐休闲</h3>
+                <ul>
+                    <li><a href="">自助</a></li>
+                    <li><a href="">火锅烧烤</a></li>
+                    <li><a href="">蛋糕甜品</a></li>
+                    <li><a href="">地方菜系</a></li>
+                    <li><a href="">日韩亚系</a></li>
+                    <li><a href="">西餐国际</a></li>
+                    <li><a href="">快餐休闲</a></li>
+                    <li><a href="">海鲜</a></li>
+                </ul>
+                <a href="" class="more">更多</a>
+            </div>
+            <!-- 商品区块展示 -->
+            <div class="shop_list ">
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/135453814122649400.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place '>西城区</span>
+                    <a href="" class="golook"></a>
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/131482_130002311150000000.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/172206_8894720.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/176769-1359188408566.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/8d8a20f9-0fb6-42a5-9507-8bf0d4f48cc8.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/477.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/13591039269810.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/c633c8a3-4761-4b04-961d-2f8b90f51f7a.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/bc87826a-f18c-4bf5-aafe-3237fa948aba.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--查看更多区域-->
+            <div class="look_more">
+                <p>北京还有<span class="orange">7301</span>个<span class="font_big">美食天下</span>团购，<a href="" class="orange more_a">查看更多24个</a></p>
+            </div>
+            <!-- 生活服务区域 -->
+            <div id="title_box">
+                <h3 id="shenghuofuwu">生活服务</h3>
+                <ul>
+                    <li><a href="">自助</a></li>
+                    <li><a href="">火锅烧烤</a></li>
+                    <li><a href="">蛋糕甜品</a></li>
+                    <li><a href="">地方菜系</a></li>
+                    <li><a href="">日韩亚系</a></li>
+                    <li><a href="">西餐国际</a></li>
+                    <li><a href="">快餐休闲</a></li>
+                    <li><a href="">海鲜</a></li>
+                </ul>
+                <a href="" class="more">更多</a>
+            </div>
+            <!-- 商品区块展示 -->
+            <div class="shop_list ">
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/135453814122649400.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place '>西城区</span>
+                    <a href="" class="golook"></a>
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/131482_130002311150000000.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/172206_8894720.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/176769-1359188408566.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/8d8a20f9-0fb6-42a5-9507-8bf0d4f48cc8.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/477.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/13591039269810.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/c633c8a3-4761-4b04-961d-2f8b90f51f7a.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop " time="1478793600000">
+                    <div class="new_ico"></div>
+                    <img src="images/bc87826a-f18c-4bf5-aafe-3237fa948aba.jpg" class="shop_pic" />
+                    <a href="" class="web_name web_name_txz">拉手网</a>
+                    <span class="price">￥<span>98</span></span>
+                    <span class="old_price">￥<span class="over_line">262</span>(<span class="discount">3.7</span>折)</span>
+                    <a href="" class="title">仅售98元，市场价262元的福成肥牛2人餐，让我们的舌尖与佳肴美丽邂逅</a>
+                    <span class='place'>西城区</span>
+                    <a href="" class="golook"></a>
+                    <!-- 隐藏效果 -->
+                    <div class="cover"></div>
+                    <p class="shop_name">商家：<a href="#">福成肥牛</a> 等7家</p>
+                    <p class="count_down">今日开始，还有<span class="day">49</span>天<span class="hour">13</span>小时<span class="min">17</span>分<span class="sec">48秒</span></p>
+                    <div class="shop_hide_box">
+                        <div class="con_box">
+                            <p class="comment"><a href="">团购评论</a>(1)</p>
+                            <p class="saled">已售<span>(239)</span></p>
+                            <a href="" class="collect">收藏团购</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--查看更多区域-->
+            <div class="look_more">
+                <p>北京还有<span class="orange">7301</span>个<span class="font_big">美食天下</span>团购，<a href="" class="orange more_a">查看更多24个</a></p>
+            </div>
+        </div>
+        <!-- 左侧商品展示列结束 -->
+        <!-- 主体的右侧部分 -->
+        <div id="r_list_box">
+            <img src="images/zxt_ad.jpg" alt="" />
+            <!-- 看电影 -->
+            <div class="title_box">
+                <h4><a href="">看电影</a></h4>
+                <span class="r_span">查影讯 团购超值电影票</span>
+            </div>
+            <div class="has_select">
+                <select name="" id="" class="select_one">
+                    <option value="">选择区域</option>
+                    <option value="">朝阳区</option>
+                    <option value="">海淀区</option>
+                    <option value="">石景山区</option>
+                    <option value="">门头沟区</option>
+                </select>
+                <select name="" id="" class="select_two">
+                    <option value="">选择影院</option>
+                    <option value="">博纳国际影城(悠唐店)</option>
+                    <option value="">紫光影城</option>
+                    <option value="">劲松电影院</option>
+                </select>
+                <a href="" class="btn">查看</a>
+                <span class="hot">热门影片</span>
+                <p class="film_name">
+                    <a href="">愤怒的小孩</a>
+                    <a href="">谍影重重</a>
+                    <a href="">源代码</a>
+                </p>
+            </div>
+            <!-- 去旅游 -->
+            <div class="title_box">
+                <h4><a href="">去旅游</a></h4>
+                <span class="r_span">团线路 团酒店</span>
+            </div>
+            <div class="has_select">
+                <select name="" id="" class="select_one city">
+                    <option value="">选择人气旅游城市</option>
+                    <option value="">北京</option>
+                    <option value="">上海</option>
+                    <option value="">三亚</option>
+                    <option value="">厦门</option>
+                </select>
+                <a href="" class="btn">查看</a>
+                <span class="hot">热门城市</span>
+                <p class="film_name">
+                    <a href="">三亚</a>
+                    <a href="">上海</a>
+                    <a href="">北京</a>
+                </p>
+            </div>
+            <!-- 我的定制 -->
+            <div class="title_box">
+                <h4><a href="">我的定制</a></h4>
+            </div>
+            <div class="custom_made">
+                <a href="" class="ico one">添加您最感兴趣的<span>地点</span></a>
+                <a href="" class="ico two">添加您最信任的<span>团购站</span></a>
+                <a href="" class="ico three">添加您最心仪的<span>关键词</span></a>
+                <p>即刻<a href="">登录</a>，定制属于自己的团购！</p>
+            </div>
+            <!-- 我的定制结束 -->
+            <img src="images/8da7edd1-ba1b-4ee2-bf09-1e0039ab25cf.jpg" alt="" />
+            <!-- 销量排行 -->
+            <div class="title_box">
+                <h4><a href="" class='gray'>销量排行</a></h4>
+                <a href="" class="r_a">更多分类榜单>></a>
+            </div>
+            <div class="rank_list">
+                <ul>
+                    <li>
+                        <a href="" class="title">仅售31元，市场价80元的星美国际影城观影票，美好时光铭</a>
+                        <span class="num">19760</span>
+                        <span class="status">已售</span>
+                    </li>
+                    <li>
+                        <a href="" class="title">汉拿山韩式石锅拌饭[年末狂欢]!仅售19.2元,最高价值</a>
+                        <span class="num">19760</span>
+                        <span class="status">已售</span>
+                    </li>
+                    <li>
+                        <a href="" class="title">【通州区】仅46元，享原价328元名流之星量贩KTV欢唱</a>
+                        <span class="num">19760</span>
+                        <span class="status">已售</span>
+                    </li>
+                    <li>
+                        <a href="" class="title">【2店通用】仅39元，市场价237元『酷姿KTV』欢唱</a>
+                        <span class="num">19760</span>
+                        <span class="status">已售</span>
+                    </li>
+                    <li>
+                        <a href="" class="title">【北京蔡氏阿波罗眼镜】在线支付29元，到店支付260元！</a>
+                        <span class="num">19760</span>
+                        <span class="status">已售</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 关注排行 -->
+            <div class="title_box">
+                <h4><a href="" class='gray'>关注排行</a></h4>
+            </div>
+            <div class="rank_list">
+                <ul>
+                    <li>
+                        <a href="" class="title">仅售31元，市场价80元的星美国际影城观影票，美好时光铭</a>
+                        <span class="num">19760</span>
+                        <span class="status">已售</span>
+                    </li>
+                    <li>
+                        <a href="" class="title">汉拿山韩式石锅拌饭[年末狂欢]!仅售19.2元,最高价值</a>
+                        <span class="num">19760</span>
+                        <span class="status">已售</span>
+                    </li>
+                    <li>
+                        <a href="" class="title">【通州区】仅46元，享原价328元名流之星量贩KTV欢唱</a>
+                        <span class="num">19760</span>
+                        <span class="status">已售</span>
+                    </li>
+                    <li>
+                        <a href="" class="title">【2店通用】仅39元，市场价237元『酷姿KTV』欢唱</a>
+                        <span class="num">19760</span>
+                        <span class="status">已售</span>
+                    </li>
+                    <li>
+                        <a href="" class="title">【北京蔡氏阿波罗眼镜】在线支付29元，到店支付260元！</a>
+                        <span class="num">19760</span>
+                        <span class="status">已售</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 关注排行结束 -->
+            <img src="images/71e7415a-91f0-4e2e-b5ec-68582aa75e2e.jpg" alt="" />
+            <!-- 转让求购 -->
+            <div class="title_top">
+                <h4><a href="" class='gray'>转让求购</a></h4>
+                <ul>
+                    <li><a href="" style="border-left:none;">美食</a></li>
+                    <li><a href="">娱乐</a></li>
+                    <li><a href="">生活</a></li>
+                </ul>
+            </div>
+            <div id="assignment">
+                <ul>
+                    <li><a href="">北京|糯米网同一首歌马连道红莲店6人</a></li>
+                    <li><a href="">北京|仅99元！乐享原价189元的金海韵</a></li>
+                    <li><a href="">北京|疯狂英语阅读版合订本总第24期</a></li>
+                    <li><a href="">转天津派摄影定金</a></li>
+                    <li><a href="">北京|北喜日式料理超值/豪华日式自助</a></li>
+                    <li><a href="" class="want_ico">求购北京同一首歌KTV2小时欢唱北京</a></li>
+                    <li><a href="" class="want_ico">北京|同一首歌KTV俱乐部欢唱券14张</a></li>
+                    <li><a href="" class="want_ico">北京|团啦游戏币不想去的就来砸我吧</a></li>
+                </ul>
+            </div>
+            <img src="images/84ca3d92-9c05-411f-bf68-e5cf5ec6500a.jpg" alt="" />
+            <!-- 网友晒团 -->
+            <div class="title_top">
+                <h4><a href="" class='gray'>网友晒团</a></h4>
+                <ul>
+                    <li><a href="" style="border-left:none;">美食</a></li>
+                    <li><a href="">娱乐</a></li>
+                    <li><a href="">生活</a></li>
+                </ul>
+            </div>
+            <ul id="friend">
+                <li>
+                    <img src="images/728ecfa9-64d8-4463-9306-ec1576a269c3.jpg" alt="" />
+                    <p><a href="" class="name">hanxue112211</a>：<a href="">一顿丰盛农家菜 妈妈生日之聚餐</a></p>
+                </li>
+                <li>
+                    <img src="images/1505535d-dd56-4043-9ae7-de1b0ff9fd78.jpg" alt="" />
+                    <p><a href="" class="name">张李京</a>：<a href="">萨莉亚意式餐厅 价格实惠味道好</a></p>
+                </li>
+                <li>
+                    <img src="images/728ecfa9-64d8-4463-9306-ec1576a269c3.jpg" alt="" />
+                    <p><a href="" class="name">hanxue112211</a>：<a href="">一顿丰盛农家菜 妈妈生日之聚餐</a></p>
+                </li>
+                <li>
+                    <img src="images/728ecfa9-64d8-4463-9306-ec1576a269c3.jpg" alt="" />
+                    <p><a href="" class="name">hanxue112211</a>：<a href="">一顿丰盛农家菜 妈妈生日之聚餐</a></p>
+                </li>
+                <li>
+                    <img src="images/728ecfa9-64d8-4463-9306-ec1576a269c3.jpg" alt="" />
+                    <p><a href="" class="name">hanxue112211</a>：<a href="">一顿丰盛农家菜 妈妈生日之聚餐</a></p>
+                </li>
+            </ul>
+            <img src="images/602bcbed-4c8d-48ac-a357-69baaff497c7.jpg" alt="" />
+            <!-- 资讯 -->
+            <div class="title_top">
+                <h4><a href="" class='gray'>资讯</a></h4>
+            </div>
+            <ul id="news">
+                <li><a href="">团购网站追求“短期盈利”存在弊端</a></li>
+                <li><a href="">团购越来越“重” 明天你怎么“团”</a></li>
+                <li><a href="">团购网盈利能力增强是个不争的事实</a></li>
+                <li><a href="">赔本赚人气成商家拒绝团友打包理由</a></li>
+                <li><a href="">地方工商局开展团购专项整治工作！</a></li>
+                <li><a href="">团购回归理性发展 一线站走两条路线</a></li>
+                <li><a href="">冯晓海坦言过去6个月满座网最艰难</a></li>
+                <li><a href="">年末北上广深电影团购拉动市场消费</a></li>
+                <li><a href="">千品网被裁员工将获补偿 公司寻融资</a></li>
+            </ul>
+            <img src="images/1bf3e537-4bbd-4268-8276-724fa3e1d983.jpg" alt="" />
+            <!-- 其他城市团购 -->
+            <div class="title_top">
+                <h4><a href="" class='gray'>其他城市团购</a></h4>
+            </div>
+            <ul id="other_city">
+                <li><a href="">北京团购</a></li>
+                <li><a href="">上海团购</a></li>
+                <li><a href="">广州团购</a></li>
+                <li><a href="">深圳团购</a></li>
+                <li><a href="">武汉团购</a></li>
+                <li><a href="">西安团购</a></li>
+                <li><a href="">郑州团购</a></li>
+                <li><a href="">杭州团购</a></li>
+                <li><a href="">南京团购</a></li>
+                <li><a href="">长沙团购</a></li>
+                <li><a href="">天津团购</a></li>
+                <li><a href="">成都团购</a></li>
+            </ul>
+            <img src="images/5449f4c5-34d3-4d37-80da-d32ee056f2d6.jpg" alt="" />
+            <!-- 北京团购导航提示 -->
+            <div class="title_top">
+                <h4><a href="" class='gray'>北京团购导航提示</a></h4>
+            </div>
+            <p id="bj_remind">团800共收录919个北京团购网站，北京商家45591个，有55036个团购活动正在进行中，其中今日新增团购1629个。北京团购活动中包括25374个北京本地团购，24483个网购精品团购。在团购活动中如遇到问题，请到<a href="">团购投诉</a>中心进行反馈，团800北京客服会帮你谋求解决。</p>
+            <img src="images/acf5eae7-7c76-42da-a56d-cfbb23e6910f.jpg" alt="" />
+            <!-- 品牌折扣区 -->
+        </div>
+        <!-- 主体的右侧部分结束 -->
+    </div>
+    <!--    </div> -->
+    <!-- 底部区域 -->
+    <!-- 品牌折扣区 -->
+    <div id="bottom_box">
+        <div id="outlets">
+            <h2>品牌折扣区</h2>
+            <div id="pic_list">
+                <img src="images/pic_list/1.jpg" alt="" style="margin-left:10px;" />
+                <img src="images/pic_list/2.jpg" alt="" />
+                <img src="images/pic_list/3.jpg" alt="" />
+                <img src="images/pic_list/4.jpg" alt="" />
+                <img src="images/pic_list/5.jpg" alt="" />
+                <img src="images/pic_list/6.jpg" alt="" />
+                <img src="images/pic_list/7.jpg" alt="" />
+                <img src="images/pic_list/8.jpg" alt="" />
+            </div>
+        </div>
+        <!-- 品牌折扣商品列表区域 -->
+        <div id="outlets_list">
+            <div class="outlets_box">
+                <div class="pic_box">
+                    <img src="images/a6459eac-b027-4077-952c-7df4ac4925f2.jpg" alt="" />
+                    <div class="cover"></div>
+                </div>
+                <img src="images/6acc9f2c-21dd-4b82-a5b0-aab1eff03ecf.jpg" alt="" class="lit_pic" />
+                <a href="" class="title">0元免费领取价值58元丝塔芙保湿润肤乳</a>
+            </div>
+            <div class="outlets_box">
+                <div class="pic_box">
+                    <img src="images/7dd520ee-5245-40fc-be32-e0c33c7482ab.jpg" alt="" />
+                    <div class="cover"></div>
+                </div>
+                <img src="images/670d7ae5-309b-4e8f-9beb-0d2c7409ad67.jpg" alt="" class="lit_pic" />
+                <a href="" class="title">冬日滋润超值特惠礼包美体乳+护手霜69元</a>
+            </div>
+            <div class="outlets_box">
+                <div class="pic_box">
+                    <img src="images/21e878d5-6ec5-441d-a82d-712f090a184e.jpg" alt="" />
+                    <div class="cover"></div>
+                </div>
+                <img src="images/498feb20-4357-41bd-97df-7db3a08e56f6.jpg" alt="" class="lit_pic" />
+                <a href="" class="title">清仓放”价“ 折上4折起</a>
+            </div>
+            <div class="outlets_box">
+                <div class="pic_box">
+                    <img src="images/cb0f19cb-7e2d-4578-bd7e-2202f7d28e9d.jpg" alt="" />
+                    <div class="cover"></div>
+                </div>
+                <img src="images/944fbcc6-66e7-4416-a276-55234529c8d8.jpg" alt="" class="lit_pic" />
+                <a href="" class="title">大屏智能手机 数码 平板电脑 笔记本寒假</a>
+            </div>
+            <div class="outlets_box">
+                <div class="pic_box">
+                    <img src="images/a3c0eb08-6e67-4733-96bd-d249230f6eec.jpg" alt="" />
+                    <div class="cover"></div>
+                </div>
+                <img src="images/73f9dc26-1902-4a4d-a81c-76a3c70df3a2.jpg" alt="" class="lit_pic" />
+                <a href="" class="title">过年换新衣女装1.4折起</a>
+            </div>
+            <div class="outlets_box">
+                <div class="pic_box">
+                    <img src="images/368f87c0-67fd-4b0b-b7f8-47caa3c53f67.jpg" alt="" />
+                    <div class="cover"></div>
+                </div>
+                <img src="images/de7b63a8-21a9-4b1f-83c0-fe248ab5ea32.jpg" alt="" class="lit_pic" />
+                <a href="" class="title">年夜饭上要喝的东西 满500立减100</a>
+            </div>
+            <div class="outlets_box">
+                <div class="pic_box">
+                    <img src="images/a6107a53-07bd-4011-897c-cf9344e0c362.jpg" alt="" />
+                    <div class="cover"></div>
+                </div>
+                <img src="images/22a2fadf-7f0b-4ff1-8deb-1e4b188d697f.jpg" alt="" class="lit_pic" />
+                <a href="" class="title">天际煮蛋器 38.5元</a>
+            </div>
+            <div class="outlets_box">
+                <div class="pic_box">
+                    <img src="images/39d43337-b514-4341-9d87-a28f9abeeac0.jpg" alt="" />
+                    <div class="cover"></div>
+                </div>
+                <img src="images/265825e2-58b7-4af1-854b-249f38d0bad0.jpg" alt="" class="lit_pic" />
+                <a href="" class="title">康尔健野户外烧烤烤炉 199元</a>
+            </div>
+        </div>
+        <!-- 更多B2C -->
+        <div id="more_b2c"><a href="">更多B2C商城精品活动>></a></div>
+        <!-- 其他信息区域 -->
+        <div id="infos">
+            <div id="wenzi_box">
+                <p>用户帮助</p>
+                <a href="">团购投诉</a>
+                <a href="">使用指南</a>
+                <a href="">意见反馈</a>
+                <a href="">服务条款</a>
+                <a href="">团购导航</a>
+            </div>
+            <div id="wenzi_box">
+                <p>获取更新</p>
+                <a href="">邮件订阅</a>
+                <a href="">官方博客</a>
+                <a href="">新浪微博</a>
+                <a href="">腾讯微博</a>
+            </div>
+            <div id="wenzi_box">
+                <p>商务合作</p>
+                <a href="">团购网站收录</a>
+                <a href="">开放API</a>
+                <a href="">团800通行证</a>
+                <a href="">友情链接</a>
+            </div>
+            <div id="wenzi_box">
+                <p>公司信息</p>
+                <a href="">关于团800</a>
+                <a href="">诚聘英才</a>
+            </div>
+            <div id="wenzi_box">
+                <p>手机版<a href="" class='daigou'>手机代购订单</a></p>
+                <p class='mobile'>团800：<a href="">iphone</a> <a href="">android</a></p>
+                <p class='mobile'>淘800：<a href="">iphone</a> <a href="">android</a></p>
+                <p class='mobile'>惠800：<a href="">iphone</a> <a href="">android</a></p>
+                <p class='mobile'>电影票：<a href="">iphone</a> <a href="">android</a></p>
+            </div>
+        </div>
+         <!-- 友情链接 -->
+        <div id="links_box">
+            <span>友情链接：</span><a href="">233网校</a><a href="">马可波罗</a><a href="">万家热线</a><a href="">美食杰</a><a href="">创业网</a><a href="">时尚品牌网</a><a href="">列表分类信息网</a><a href="">中国网库</a><a href="">杂志网</a><a href="">健康咨询网</a><a href="">第一车网</a><a href="">蔚蓝网</a><a href="">图吧地图</a><a href="">中国客运站</a><a href="">中国建材采购网</a><a href="">新东方网</a><a href="">外语教育网</a><a href="">职业培训教育网</a><a href="">医学教育网</a><a href="">金属价格</a><a href="">绿野户外网</a><a href="">电子商务</a><a href="">驴妈妈旅游网</a><a href="">网上买书</a><a href="">展会网</a><a href="">网易优惠券</a><a href="">历趣网</a><a href="">CMS系统</a><a href="">春运</a><a href="">今题网</a><a href="">住哪网</a><a href="">七丽女性网</a><a href="">返利网</a><a href="">驾校一点通</a><a href="">天气预报查询</a><a href="">卡宝宝信用卡</a><a href="">勤加缘网</a><a href="">发型设计</a><a href="">0460网站之家</a><a href="">北京手递手网</a>
+        </div>
+        <p id="copy">Copyright&copy;2010-2013 版权所有 TUAN800.COM</p>
+		<p id="beian"><a href="">京ICP证120075号</a><span>京ICP备10051110号</span><span>京公网安备110105014520</span><a href="">专业团购导航</a><a href="">团购</a><a href="">团购网</a></p>
+    </div>
+    <!-- 左侧跳转区域 -->
+	<div id="jump_box">
+		<a href="#meishitianxia" class="one"></a>
+		<a href="#xiuxianyule" class="two"></a>
+		<a href="#shenghuofuwu" class="three"></a>
+		<a href="#jiudianlvyou" class="four"></a>
+		<a href="#wanggoujingpin" class="five"></a>
+		<a href="#top" class="six"></a>
+	</div>
+</body>
+
+</html>
