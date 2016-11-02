@@ -77,7 +77,7 @@ $(function(){
 // 图片轮播区域
 $(function(){
 var paixu=0;
-var tingzhi=setInterval(lunbo,2000);	
+var tingzhi=setInterval(lunbo,2500);	
 function lunbo(){
 	paixu++;
 	if(paixu==7){
@@ -93,7 +93,7 @@ $("#main #left_menu_flash #flash_box ul li").mouseover(function(){
 	$("#main #left_menu_flash #flash_box ul li").eq(paixu).addClass("hover").siblings("#main #left_menu_flash #flash_box ul li").removeClass("hover");
 });
 $("#main #left_menu_flash #flash_box ul li").mouseout(function(){
-	tingzhi=setInterval(lunbo,2000);
+	tingzhi=setInterval(lunbo,2500);
 });
 });
 /*小图轮换区域*/
